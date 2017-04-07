@@ -17,6 +17,11 @@
 		C504E66E1E94946F00BFA2DE /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = C504E66D1E94946F00BFA2DE /* AESCipher.m */; };
 		C504E6741E94947600BFA2DE /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C504E6711E94947600BFA2DE /* Base64.m */; };
 		C504E6751E94947600BFA2DE /* DES.m in Sources */ = {isa = PBXBuildFile; fileRef = C504E6731E94947600BFA2DE /* DES.m */; };
+		C5CF170C1E97779700C96D09 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CF17091E97779700C96D09 /* RSAEncryptor.m */; };
+		C5CF170D1E97779700C96D09 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = C5CF170A1E97779700C96D09 /* private_key.p12 */; };
+		C5CF170E1E97779700C96D09 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = C5CF170B1E97779700C96D09 /* public_key.der */; };
+		C5CF170F1E97780500C96D09 /* private_key.p12 in Sources */ = {isa = PBXBuildFile; fileRef = C5CF170A1E97779700C96D09 /* private_key.p12 */; };
+		C5CF17101E97780500C96D09 /* public_key.der in Sources */ = {isa = PBXBuildFile; fileRef = C5CF170B1E97779700C96D09 /* public_key.der */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		C504E6711E94947600BFA2DE /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		C504E6721E94947600BFA2DE /* DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DES.h; sourceTree = "<group>"; };
 		C504E6731E94947600BFA2DE /* DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DES.m; sourceTree = "<group>"; };
+		C5CF17081E97779700C96D09 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		C5CF17091E97779700C96D09 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		C5CF170A1E97779700C96D09 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		C5CF170B1E97779700C96D09 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,7 @@
 		C504E6451E94945700BFA2DE /* AES_and_DES */ = {
 			isa = PBXGroup;
 			children = (
+				C5CF17071E97771800C96D09 /* RSA */,
 				C504E66F1E94947600BFA2DE /* DES */,
 				C504E66B1E94946F00BFA2DE /* AES */,
 				C504E64C1E94945700BFA2DE /* ViewController.h */,
@@ -140,6 +150,17 @@
 				C504E6731E94947600BFA2DE /* DES.m */,
 			);
 			path = DES;
+			sourceTree = "<group>";
+		};
+		C5CF17071E97771800C96D09 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				C5CF17081E97779700C96D09 /* RSAEncryptor.h */,
+				C5CF17091E97779700C96D09 /* RSAEncryptor.m */,
+				C5CF170A1E97779700C96D09 /* private_key.p12 */,
+				C5CF170B1E97779700C96D09 /* public_key.der */,
+			);
+			path = RSA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +249,8 @@
 				C504E6561E94945700BFA2DE /* LaunchScreen.storyboard in Resources */,
 				C504E6531E94945700BFA2DE /* Assets.xcassets in Resources */,
 				C504E6511E94945700BFA2DE /* Main.storyboard in Resources */,
+				C5CF170D1E97779700C96D09 /* private_key.p12 in Resources */,
+				C5CF170E1E97779700C96D09 /* public_key.der in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CF170F1E97780500C96D09 /* private_key.p12 in Sources */,
+				C5CF17101E97780500C96D09 /* public_key.der in Sources */,
 				C504E6751E94947600BFA2DE /* DES.m in Sources */,
 				C504E64E1E94945700BFA2DE /* ViewController.m in Sources */,
 				C504E6741E94947600BFA2DE /* Base64.m in Sources */,
+				C5CF170C1E97779700C96D09 /* RSAEncryptor.m in Sources */,
 				C504E64B1E94945700BFA2DE /* AppDelegate.m in Sources */,
 				C504E66E1E94946F00BFA2DE /* AESCipher.m in Sources */,
 				C504E6481E94945700BFA2DE /* main.m in Sources */,
@@ -451,6 +477,7 @@
 				C504E6671E94945700BFA2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C504E6681E94945700BFA2DE /* Build configuration list for PBXNativeTarget "AES_and_DESTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +486,7 @@
 				C504E66A1E94945700BFA2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

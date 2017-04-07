@@ -10,6 +10,7 @@
 
 #import "DES.h"
 #import "AESCipher.h"
+#import "RSAEncryptor.h"
 
 @interface ViewController ()
 
@@ -47,6 +48,27 @@
     NSString *DESDecodeString = [DES decryptUseDES:DESEncodeString key:DESKey];
     NSLog(@"DES加密之后的结果： %@", DESEncodeString);
     NSLog(@"DES解密之后的结果： %@", DESDecodeString);
+    
+    
+    
+    
+    // ******************** RSA ***************** //
+    
+    // 需要加密的字符串
+    NSString *RSAString = @"RSAString";
+    
+    //使用.der和.p12中的公钥私钥加密解密
+    NSString *public_key_path = [[NSBundle mainBundle] pathForResource:@"public_key.der" ofType:nil];
+    NSString *private_key_path = [[NSBundle mainBundle] pathForResource:@"private_key.p12" ofType:nil];
+    
+    NSString *RSAEncodeString = [RSAEncryptor encryptString:RSAString publicKeyWithContentsOfFile:public_key_path];
+    NSString *RSADecodeString = [RSAEncryptor decryptString:RSAEncodeString privateKeyWithContentsOfFile:private_key_path password:@"123456"];
+    NSLog(@"RSA加密之后的结果： %@", RSAEncodeString);
+    NSLog(@"RSA解密之后的结果： %@", RSADecodeString);
+    
+    
+    
+    
 }
 
 
